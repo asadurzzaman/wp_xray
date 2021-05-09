@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				wpxray_com_posted_on();
-				wpxray_com_posted_by();
+				wpxray_posted_on();
+				wpxray_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php wpxray_com_post_thumbnail(); ?>
+	<?php wpxray_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -37,7 +37,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpxray-com' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wpxray' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,7 +50,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wpxray-com' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wpxray' ),
 				'after'  => '</div>',
 			)
 		);
@@ -58,6 +58,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php wpxray_com_entry_footer(); ?>
+		<?php wpxray_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
