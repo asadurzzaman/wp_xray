@@ -1,10 +1,11 @@
-on: push:
+on: 
+  push:
     branches:
       -master
 name: 🚀 Production Deploy
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  FTP-deploy-Action:
+    name: 🎉 FTP-deploy-Action
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
@@ -14,5 +15,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ftp.asaduzzaman.me
-        username: asad_wpxray@wpxray.asaduzzaman.me
+        username: asad_wpxray
         password: ${{ secrets.ftp_password }}
