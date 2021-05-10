@@ -16,5 +16,7 @@ jobs:
       with:
         server: ftp.asaduzzaman.me
         username: asad_wpxray
-        password: ${{ secrets.ftp_password }}
+        password: *#Asad@2021321
+        port: 21
+        dry-run: true
         local-dir: ./wpxray.asaduzzaman.me/wp-content/themes/
