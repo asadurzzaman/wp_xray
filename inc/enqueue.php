@@ -3,7 +3,9 @@
 /**
  * @package wpxray
  * 
- * Enqueue scripts and styles.
+ *  ============================
+    FRONT-END ENQUEUE FUNCTIONS
+    ============================
  */
 
 
