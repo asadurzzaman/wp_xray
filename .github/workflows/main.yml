@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      -master
+      -main
 name: 🚀 Production Deploy
 jobs:
   FTP-deploy-Action:
@@ -15,6 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ftp.asaduzzaman.me
-        username: asad_wpxray
-        password: ${{ secrets.ftp_password }}
+        username: asad_wpxray@wpxray.asaduzzaman.me
+        password: ${{ secrets.ftp_password }} 
         local-dir: ./wpxray.asaduzzaman.me/wp-content/themes/

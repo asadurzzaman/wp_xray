@@ -1,10 +1,11 @@
 <?php
+
 /**
- * wpxray functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package wpxray
+ * 
+ *  ============================
+        THEME SUPPORT OPTIONS
+    ============================
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -50,7 +51,9 @@ if ( ! function_exists( 'wpxray_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'wpxray' ),
+				'main-menu' => esc_html__( 'Primary', 'wpxray' ),
+                'mobile-menu' => esc_html__( 'Mobile', 'wpxray' ),
+                'footer-menu' => esc_html__( 'Footer', 'wpxray' ),
 			)
 		);
 
@@ -103,75 +106,3 @@ if ( ! function_exists( 'wpxray_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'wpxray_setup' );
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function wpxray_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wpxray_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'wpxray_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function wpxray_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'wpxray' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'wpxray' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'wpxray_widgets_init' );
-
-
-/**
- * Implement the Enqueue files.
- */
-require get_template_directory() . '/inc/enqueue.php';
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
