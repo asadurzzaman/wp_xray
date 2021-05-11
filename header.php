@@ -28,9 +28,9 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'wpxray'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<div class="container">
-				<div class="row">
-					<div class="col">
+			<div class="container overflow-hidden">
+				<div class="row align-items-center">
+					<div class="col-2">
 						<div class="site-branding">
 							<?php
 							the_custom_logo();
@@ -51,8 +51,8 @@
 							<?php endif; ?>
 						</div><!-- .site-branding -->
 					</div>
-					<div class="col">
-						<nav id="site-navigation" class="main-navigation">
+					<div class="col-10 ">
+						<nav id="site-navigation" class="main-navigation justify-content-end">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'wpxray'); ?></button>
 							<?php
 							wp_nav_menu(
