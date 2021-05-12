@@ -59,6 +59,7 @@
 								array(
 									'theme_location' => 'main-menu',
 									'menu_id'        => 'primary-menu',
+									'menu-class'	=>	'nav-item',
 								)
 							);
 							?>
