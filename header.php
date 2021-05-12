@@ -24,9 +24,7 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'wpxray'); ?></a>
-
+	<div id="page" class="site"> 
 		<header id="masthead" class="site-header">
 			<div class="container overflow-hidden">
 				<div class="row align-items-center">
@@ -51,7 +49,7 @@
 							<?php endif; ?>
 						</div><!-- .site-branding -->
 					</div>
-					<div class="col-10 ">
+					<div class="col-10">
 						<nav id="site-navigation" class="main-navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'wpxray'); ?></button>
 							<?php
@@ -59,15 +57,21 @@
 								array(
 									'theme_location' => 'main-menu',
 									'menu_id'        => 'primary-menu',
-									'menu-class'	=>	'nav-item',
+									'menu_class'	=>	'nav justify-content-center',
+									'container_class'	=>	''
 								)
 							);
 							?>
+						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+							<a class="d-inline" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
+						<?php } ?>
 						</nav><!-- #site-navigation -->
-					</div>
 
-
-
+					</div> 
 				</div>
 			</div>
 		</header><!-- #masthead -->
+		<div class="container">
+			<div class="row">
+			
+			
