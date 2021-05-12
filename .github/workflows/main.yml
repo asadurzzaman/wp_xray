@@ -17,4 +17,4 @@ jobs:
         server: ftp.asaduzzaman.me
         username: ${{ secrets.ftp_username }} 
         password: ${{ secrets.ftp_password }} 
-        local-dir: ./wpxray.asaduzzaman.me/wp-content/themes/
+        local-dir: /home/asaduzza/wpxray.asaduzzaman.me/wp-content/themes/
