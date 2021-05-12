@@ -30,43 +30,32 @@
 				<div class="row align-items-center">
 					<div class="col-2">
 						<div class="site-branding">
-							<?php
-							the_custom_logo();
-							if (is_front_page() && is_home()) :
-							?>
-								<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-							<?php
-							else :
-							?>
-								<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-							<?php
-							endif;
-							$wpxray_description = get_bloginfo('description', 'display');
-
-							if ($wpxray_description || is_customize_preview()) :
-							?>
-								<p class="site-description"><?php echo $wpxray_description;?></p>
-							<?php endif; ?>
+							<?php the_custom_logo(); ?> 
 						</div><!-- .site-branding -->
 					</div>
-					<div class="col-10">
-						<nav id="site-navigation" class="navbar">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'wpxray'); ?></button>
-							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'main-menu',
-									'menu_id'        => 'primary-menu',
-									'menu_class'	=>	'justify-content-center', 
-								)
-							);
-							?>
-						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-							<a class="d-inline" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
-						<?php } ?>
-						</nav><!-- #site-navigation -->
-
+					<div class="col-9">
+						<nav class="navbar navbar-expand-lg"> 
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarScroll">
+								<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'main-menu',
+										'menu_id'        => 'primary-menu',
+										'menu_class'	=>	'nav justify-content-center', 
+									)
+								);
+								?> 
+							</div> 
+						</nav>
 					</div> 
+					<div class="col">
+						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+							<a class="d-inline justify-content-end" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
 		</header><!-- #masthead -->
