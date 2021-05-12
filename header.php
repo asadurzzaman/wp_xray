@@ -44,7 +44,7 @@
 							<?php
 							endif;
 							$wpxray_description = get_bloginfo('description', 'display');
-							
+
 							if ($wpxray_description || is_customize_preview()) :
 							?>
 								<p class="site-description"><?php echo $wpxray_description;?></p>
