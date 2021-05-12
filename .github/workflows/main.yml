@@ -16,5 +16,4 @@ jobs:
       with:
         server: ftp.asaduzzaman.me
         username: ${{ secrets.ftp_username }} 
-        password: ${{ secrets.ftp_password }} 
-        local-dir: /wp-content/themes/
+        password: ${{ secrets.ftp_password }}  
