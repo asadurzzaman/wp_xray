@@ -28,12 +28,12 @@
 		<header id="masthead" class="site-header">
 			<div class="container overflow-hidden">
 				<div class="row align-items-center">
-					<div class="col-2">
-						<div class="site-branding">
+					<div class="col-xxl-3">
+						<div class="site-branding logo">
 							<?php the_custom_logo(); ?> 
 						</div><!-- .site-branding -->
 					</div>
-					<div class="col-9">
+					<div class="col-xxl-7">
 						<nav class="navbar navbar-expand-lg"> 
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
@@ -44,21 +44,24 @@
 									array(
 										'theme_location' => 'main-menu',
 										'menu_id'        => 'primary-menu',
-										'menu_class'	=>	'nav justify-content-center', 
+										'menu_class'	=>	'nav', 
 									)
 								);
 								?> 
 							</div> 
 						</nav>
 					</div> 
-					<div class="col">
+					<div class="col-xxl-2">
 						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-							<a class="d-inline justify-content-end" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
-						<?php } ?>
+							<div class="wpxray-button">
+							<a class="float-end" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
+						</div>
+							<?php } ?>
 					</div>
 				</div>
 			</div>
 		</header><!-- #masthead -->
+
 		<div class="container">
 			<div class="row">
 			

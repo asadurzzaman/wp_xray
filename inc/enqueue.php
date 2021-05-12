@@ -11,9 +11,11 @@
 
 
 function wpxray_scripts() {
-	wp_enqueue_style( 'wpxray-style', get_stylesheet_uri(), array(), _S_VERSION );
+	
 	wp_style_add_data( 'wpxray-style', 'rtl', 'replace' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.0.0', 'all' );
+    wp_enqueue_style( 'Inter', 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap' );
+    wp_enqueue_style( 'wpxray-style', get_stylesheet_uri(), array(), _S_VERSION );
 
 
 

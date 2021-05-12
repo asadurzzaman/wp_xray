@@ -141,30 +141,29 @@ add_action( 'widgets_init', 'wpxray_widgets_init' );
 
 // google fonts
 
-if ( !function_exists('wpxray_fonts_url') ) :
+// if ( !function_exists('wpxray_fonts_url') ) :
 
-	function wpxray_fonts_url()
-	{
-		$fonts_url = '';
-		$fonts     = array();
-		$subsets   = 'latin';
-		if ('off' !== _x('on', 'Inter font: on or off', 'wpxray')) {
-			$fonts[] = 'Inter: 100,200,300,400,500,600,700,800,900';
-		} 
-		if ('off' !== _x('on', 'Rubik font: on or off', 'wpxray')) {
-			$fonts[] = 'Rubik: 400,500,700';
-		}
-		if ($fonts) {
-			$fonts_url = add_query_arg(array(
-				'family' => urlencode(implode('|', $fonts)),
-				'subset' => urlencode($subsets),
-			), '//fonts.googleapis.com/css');
-		}
+// 	function wpxray_fonts_url()
+// 	{
+// 		$fonts_url = '';
+// 		$fonts     = array();
+// 		$subsets   = 'latin';
+// 		if ('off' !== _x('on', 'Inter font: on or off', 'wpxray')) {
+// 			$fonts[] = 'Inter: 100,200,300,400,500,600,700,800,900';
+// 		} 
+// 		if ('off' !== _x('on', 'Rubik font: on or off', 'wpxray')) {
+// 			$fonts[] = 'Rubik: 400,500,700';
+// 		}
+// 		if ($fonts) {
+// 			$fonts_url = add_query_arg(array(
+// 				'family' => urlencode(implode('|', $fonts)),
+// 				'subset' => urlencode($subsets),
+// 			), '//fonts.googleapis.com/css');
+// 		}
 
-		return $fonts_url;
-	}
-endif;
-
+// 		return $fonts_url;
+// 	}
+// endif;
 
 // svg support
 function wpxray_svg_types($mimes){
