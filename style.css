@@ -71,9 +71,6 @@ body{
 a{
 	text-decoration: none; 
 }
-img{
-	width: 100%;
-}
 .logo img{
 	width: 150px;
 	height: auto;
@@ -122,8 +119,6 @@ ul#primary-menu li a:after {
 	padding: 16px 21px;
 	text-decoration: none;
 	color: black;
-	
-
 } 
 .wpxray-button a:hover{
 	background: #ffffff;

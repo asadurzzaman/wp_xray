@@ -28,12 +28,12 @@
 		<header id="masthead" class="site-header">
 			<div class="container overflow-hidden">
 				<div class="row align-items-center">
-					<div class="col-xxl-3">
+					<div class="col-xxl-2">
 						<div class="site-branding logo">
 							<?php the_custom_logo(); ?> 
 						</div><!-- .site-branding -->
 					</div>
-					<div class="col-xxl-7">
+					<div class="col-xxl-8">
 						<nav class="navbar navbar-expand-lg"> 
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
