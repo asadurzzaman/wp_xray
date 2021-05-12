@@ -52,7 +52,7 @@
 						</div><!-- .site-branding -->
 					</div>
 					<div class="col-10 ">
-						<nav id="site-navigation" class="main-navigation justify-content-end">
+						<nav id="site-navigation" class="main-navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'wpxray'); ?></button>
 							<?php
 							wp_nav_menu(

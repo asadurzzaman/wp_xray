@@ -51,9 +51,9 @@ if ( ! function_exists( 'wpxray_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'main-menu' => esc_html__( 'Primary', 'wpxray' ),
-                'mobile-menu' => esc_html__( 'Mobile', 'wpxray' ),
-                'footer-menu' => esc_html__( 'Footer', 'wpxray' ),
+				'main-menu' => esc_html__( 'Primary Menu', 'wpxray' ),
+                'mobile-menu' => esc_html__( 'Mobile Menu', 'wpxray' ),
+                'footer-menu' => esc_html__( 'Footer Menu', 'wpxray' ),
 			)
 		);
 
@@ -138,3 +138,46 @@ function wpxray_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'wpxray_widgets_init' );
+
+// google fonts
+
+if ( !function_exists('wpxray_fonts_url') ) :
+
+	function wpxray_fonts_url()
+	{
+		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = 'latin';
+		if ('off' !== _x('on', 'Inter font: on or off', 'wpxray')) {
+			$fonts[] = 'Inter: 100,200,300,400,500,600,700,800,900';
+		} 
+		if ('off' !== _x('on', 'Rubik font: on or off', 'wpxray')) {
+			$fonts[] = 'Rubik: 400,500,700';
+		}
+		if ($fonts) {
+			$fonts_url = add_query_arg(array(
+				'family' => urlencode(implode('|', $fonts)),
+				'subset' => urlencode($subsets),
+			), '//fonts.googleapis.com/css');
+		}
+
+		return $fonts_url;
+	}
+endif;
+
+
+// svg support
+function wpxray_svg_types($mimes){
+
+	// New allowed mime types.
+	$mimes['svg']   = 'image/svg+xml';
+	$mimes['svgz']  = 'image/svg+xml';
+	$mimes['doc']   = 'application/msword';
+
+	// Optional. Remove a mime type.
+	unset($mimes['exe']);
+
+	return $mimes;
+}
+
+add_filter('upload_mimes', 'wpxray_svg_types');
