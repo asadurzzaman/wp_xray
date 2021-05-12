@@ -50,15 +50,14 @@
 						</div><!-- .site-branding -->
 					</div>
 					<div class="col-10">
-						<nav id="site-navigation" class="main-navigation">
+						<nav id="site-navigation" class="navbar">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'wpxray'); ?></button>
 							<?php
 							wp_nav_menu(
 								array(
 									'theme_location' => 'main-menu',
 									'menu_id'        => 'primary-menu',
-									'menu_class'	=>	'nav justify-content-center',
-									'container_class'	=>	''
+									'menu_class'	=>	'justify-content-center', 
 								)
 							);
 							?>
