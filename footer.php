@@ -15,7 +15,7 @@
 	<footer id="colophon" class="site-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-6">
 				<div class="site-info">
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpxray' ) ); ?>">
 						<?php
@@ -29,6 +29,13 @@
 						printf( esc_html__( 'Theme: %1$s by %2$s.', 'wpxray' ), 'wpxray', '<a href="http://asaduzzaman.me">Asad</a>' );
 						?>
 				</div><!-- .site-info -->	
+			</div>
+			<div class="col-6">
+			<div class="footer-menu">
+				<ul class="nav">
+					<li><a href="#">Home</a></li>
+				</ul>
+			</div>
 			</div>
 		</div>
 	</div>
