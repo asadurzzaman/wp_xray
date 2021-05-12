@@ -1,11 +1,11 @@
-on: 
+on:
   push:
     branches:
       -main
-name: 🚀 Production Deploy
+name: 🚀 Deploy website on push
 jobs:
-  FTP-deploy-Action:
-    name: 🎉 FTP-deploy-Action
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
