@@ -1,0 +1,22 @@
+
+@media (max-width: 991.98px) {
+header#masthead div.align-items-center {
+    align-items: inherit !important;
+}
+button.navbar-toggler {
+    background-color: #ddd;
+}
+nav.navbar.navbar-expand-lg {
+    float: right;
+    text-align: right !important;
+}
+
+
+}
+
+/* @media ( max-width: 575.98px){
+body {
+    display: none;
+}
+
+} */
