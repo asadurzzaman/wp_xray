@@ -65,6 +65,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 
 /* Our Custom Css */
+/* @media (min-width:1400px) {
+	.container {
+		width: 1170px;
+		padding: 0px;
+	}
+} */
+
 body{
 	font-family: 'Inter', sans-serif;
 }
@@ -78,10 +85,21 @@ a{
 header.site-header {
 	background: #2D49CD; 
 }
-.navbar { 
+.navbar {
 	padding-top: inherit;
 	padding-bottom: inherit;
+	text-align: center !important;
+	display: inherit;
 }
+ul#primary-menu {
+	display: inline-flex;
+}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+	justify-content: space-around;
+}
+}
+
 ul#primary-menu li { 
 	width: 100px;
 }
@@ -94,7 +112,7 @@ ul#primary-menu li a {
 	line-height: 19px;
 	text-align: center;
 	padding: 40px 0px;
-	display: block;
+	display: inline-block;
 	position: relative;
 }
 ul#primary-menu li:last-child a{
@@ -123,4 +141,19 @@ ul#primary-menu li a:after {
 .wpxray-button a:hover{
 	background: #ffffff;
 	color: #67F6CC; 
+}
+/* Sticky menu css */
+#site-header {
+	position: fixed;
+	height: 52px;
+	background: #fff;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	transition: all .3s ease;
+	box-shadow: 0 1px 25px rgba(0, 0, 0, .1);
+}
+
+#site-header.hide {
+	top: -53px;
 }
