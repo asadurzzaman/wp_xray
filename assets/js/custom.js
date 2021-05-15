@@ -1,4 +1,6 @@
-(function ( $ ) {
+(function ($) {
+  
+
     
     //Sticky menu js
 	var doc = document.documentElement;
@@ -50,4 +52,4 @@
   };
   
   window.addEventListener('scroll', checkScroll);
-}( jQuery ) );
+}(jQuery));

@@ -28,15 +28,15 @@
 		<header id="masthead" class="site-header">
 			<div class="container overflow-hidden">
 				<div class="row align-items-center">
-					<div class="col-xxl-2">
+					<div class="col-7 col-sm-7 col-lg-2 col-xxl-2">
 						<div class="site-branding logo">
 							<?php the_custom_logo(); ?> 
-						</div><!-- .site-branding -->
+						</div>
 					</div>
-					<div class="col-xxl-8">
-						<nav class="navbar navbar-expand-lg"> 
+					<div class="col-5 col-sm-5 col-lg-8 col-xxl-8">
+						<nav class="navbar navbar-expand-lg">  
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
+							<span class="navbar-toggler-icon"></span> 
 							</button>
 							<div class="collapse navbar-collapse" id="navbarScroll">
 								<?php
@@ -51,13 +51,13 @@
 							</div> 
 						</nav>
 					</div> 
-					<div class="col-xxl-2">
+					<div class="d-none d-lg-block col-lg-2 col-xxl-2">
 						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 							<div class="wpxray-button">
-							<a class="float-end" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
-						</div>
-							<?php } ?>
-					</div>
+								<a class="float-end" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
+							</div>
+						<?php } ?>
+					</div> 
 				</div>
 			</div>
 		</header><!-- #masthead -->
