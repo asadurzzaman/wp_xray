@@ -8,37 +8,47 @@
  *
  * @package wpxray
  */
-
 ?>
 			</div>
 		</div>
 	<footer id="colophon" class="site-footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-6">
-				<div class="site-info">
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpxray' ) ); ?>">
-						<?php
-						/* translators: %s: CMS name, i.e. WordPress. */
-						printf( esc_html__( 'Proudly powered by %s', 'wpxray' ), 'WordPress' );
-						?>
-					</a>
-					<span class="sep"> | </span>
-						<?php
-						/* translators: 1: Theme name, 2: Theme author. */
-						printf( esc_html__( 'Theme: %1$s by %2$s.', 'wpxray' ), 'wpxray', '<a href="http://asaduzzaman.me">Asad</a>' );
-						?>
-				</div><!-- .site-info -->	
-			</div>
-			<div class="col-6">
-			<div class="footer-menu">
-				<ul class="nav">
-					<li><a href="#">Home</a></li>
-				</ul>
-			</div>
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="sidebar sidebar-one"> 
+							<?php dynamic_sidebar( 'sidebar-1' ); ?> 
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="sidebar sidebar-two">
+							<?php dynamic_sidebar('sidebar-2'); ?>  
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="sidebar sidebar-three">
+							<?php dynamic_sidebar('sidebar-3'); ?>  
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="sidebar sidebar-four">
+							<?php dynamic_sidebar('sidebar-4'); ?>  
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="site-info"> 
+						<p>&copy; <?php echo esc_html( the_date('Y') ) ?> <a href="/"><?php esc_url( site_url() ); ?>WPXRAY</a> . <?php esc_html_e( 'All rights reserved' ) ?></p>  
+						</div><!-- .site-info -->	
+					</div> 
+				</div>
+			</div>		
+		</div>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
