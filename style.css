@@ -118,7 +118,7 @@ ul#primary-menu li a {
 ul#primary-menu li:last-child a{
 	padding-right: 0px;
 }
-ul#primary-menu li a:after {
+ul#primary-menu li.current-menu-item a:after {
 	content: "";
 	position: absolute;
 	background: #fff;
@@ -138,10 +138,10 @@ ul#primary-menu li a:after {
 	text-decoration: none;
 	color: black;
 } 
-.wpxray-button a:hover{
+/* .wpxray-button a:hover{
 	background: #ffffff;
 	color: #67F6CC; 
-}
+} */
 /* Sticky menu css */
 #site-header {
 	position: fixed;
@@ -150,7 +150,7 @@ ul#primary-menu li a:after {
 	top: 0;
 	width: 100%;
 	z-index: 100;
-	transition: all .3s ease;
+	transition: all .5s ease;
 	box-shadow: 0 1px 25px rgba(0, 0, 0, .1);
 }
 
@@ -179,8 +179,21 @@ h2.widget-title{
 	padding: 0px;
 	list-style: none;
 }
-.sidebar ul.menu li{
-
+.sidebar ul.menu li {
+	position: relative;
+}
+.sidebar ul.menu li:hover a {
+	padding-left: 8px;
+}
+.sidebar ul.menu li:hover:after {
+	position: absolute;
+	content: "";
+	left: -12px;
+	height: 8px;
+	width: 8px;
+	background: linear-gradient(90.19deg, #FF5050 0.16%, #F55C7E 32.86%, #E315DF 53.61%, #AE5AEF 86.97%, #7C9BFF 118.37%);
+	top: 16px;
+	transform: rotate(45deg);
 }
 .sidebar ul.menu li a{
 font-family: Inter;
@@ -189,6 +202,7 @@ font-weight: normal;
 font-size: 16px;
 line-height: 40px; 
 color: #ECECEC;
+transition: all 0.5s ease;
 }
 p.fb-group{ 
 	font-family: Inter;
@@ -206,7 +220,7 @@ p.fb-group{
 	border-radius: 5px;
 	display: inline-block;
 	padding: 20px 25px;
-
+	color: #000000;
 }
 .footer-top{
 	padding: 102px 0px;
