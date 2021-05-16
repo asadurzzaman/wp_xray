@@ -78,6 +78,10 @@ body{
 a{
 	text-decoration: none; 
 }
+.button{
+	background:linear-gradient(46.85deg, #C3DE8B -73.73%, #67F6CC -11.66%, #54D4FF 91.48%);
+	border-radius: 5px;
+}
 .logo img{
 	width: 150px;
 	height: auto;
@@ -143,10 +147,8 @@ ul#primary-menu li.current-menu-item a:after {
 	color: #67F6CC; 
 } */
 /* Sticky menu css */
-#site-header {
-	position: fixed;
-	height: 52px;
-	background: #fff;
+/* #masthead {
+	position: fixed; 
 	top: 0;
 	width: 100%;
 	z-index: 100;
@@ -154,9 +156,9 @@ ul#primary-menu li.current-menu-item a:after {
 	box-shadow: 0 1px 25px rgba(0, 0, 0, .1);
 }
 
-#site-header.hide {
+#masthead.hide {
 	top: -53px;
-}
+} */
 
 /* Footer Style */
 .site-footer{
