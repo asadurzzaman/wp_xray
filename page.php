@@ -13,10 +13,12 @@
  */
 
 get_header();
+
 ?>
+<div class="col-lg-9 col-xxl-9">
 
-	<main id="primary" class="site-main">
 
+	<main id="primary" class="site-main"> 
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -31,8 +33,15 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
+	</main><!-- #main --> 
+	</div>
+	<div class="col-lg-3 col-xxl-3">
+	<?php 
+		if( !is_front_page(  ) ){
+			get_sidebar(); 
+		}
+	?> 
+	</div>
 
 <?php
-get_sidebar();
 get_footer();

@@ -14,9 +14,9 @@
 
 get_header();
 ?>
-
+<div class="col-lg-9 col-xxl-9">
 	<main id="primary" class="site-main">
-
+		
 		<?php
 		if ( have_posts() ) :
 
@@ -51,7 +51,9 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
+</div>
+<div class="col-lg-3 col-xxl-3">
+	<?php get_sidebar(); ?>
+</div>
 <?php
-get_sidebar();
 get_footer();
