@@ -217,17 +217,17 @@ if ( !function_exists('wpxray_fonts_url') ) :
 endif;
 
 // svg support
-function wpxray_svg_types($mimes){
+// function wpxray_svg_types($mimes){
 
-	// New allowed mime types.
-	$mimes['svg']   = 'image/svg+xml';
-	$mimes['svgz']  = 'image/svg+xml';
-	$mimes['doc']   = 'application/msword';
+// 	// New allowed mime types.
+// 	$mimes['svg']   = 'image/svg+xml';
+// 	$mimes['svgz']  = 'image/svg+xml';
+// 	$mimes['doc']   = 'application/msword';
 
-	// Optional. Remove a mime type.
-	unset($mimes['exe']);
+// 	// Optional. Remove a mime type.
+// 	unset($mimes['exe']);
 
-	return $mimes;
-}
+// 	return $mimes;
+// }
 
-add_filter('upload_mimes', 'wpxray_svg_types');
+// add_filter('upload_mimes', 'wpxray_svg_types');

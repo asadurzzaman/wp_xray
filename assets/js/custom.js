@@ -1,55 +1,48 @@
 (function ($) {
-  
 
-    
-    //Sticky menu js
-	var doc = document.documentElement;
-  var w = window;
+   
 
-  var prevScroll = w.scrollY || doc.scrollTop;
-  var curScroll;
-  var direction = 0;
-  var prevDirection = 0;
-
-  var header = document.getElementById('site-header');
-
-  var checkScroll = function() {
-
-    /*
-    ** Find the direction of scroll
-    ** 0 - initial, 1 - up, 2 - down
-    */
-
-    curScroll = w.scrollY || doc.scrollTop;
-    if (curScroll > prevScroll) { 
-      //scrolled up
-      direction = 2;
-    }
-    else if (curScroll < prevScroll) { 
-      //scrolled down
-      direction = 1;
-    }
-
-    if (direction !== prevDirection) {
-      toggleHeader(direction, curScroll);
-    }
-    
-    prevScroll = curScroll;
-  };
-
-  var toggleHeader = function(direction, curScroll) {
-    if (direction === 2 && curScroll > 52) { 
-      
-      //replace 52 with the height of your header in px
-
-      header.classList.add('hide');
-      prevDirection = direction;
-    }
-    else if (direction === 1) {
-      header.classList.remove('hide');
-      prevDirection = direction;
-    }
-  };
-  
-  window.addEventListener('scroll', checkScroll);
 }(jQuery));
+
+function darken_screen(yesno){
+  if( yesno == true ){
+    document.querySelector('.screen-darken').classList.add('active');
+  }
+  else if(yesno == false){
+    document.querySelector('.screen-darken').classList.remove('active');
+  }
+}
+	
+function close_offcanvas(){
+  darken_screen(false);
+  document.querySelector('.mobile-offcanvas.show').classList.remove('show');
+  document.body.classList.remove('offcanvas-active');
+}
+
+function show_offcanvas(offcanvas_id){
+  darken_screen(true);
+  document.getElementById(offcanvas_id).classList.add('show');
+  document.body.classList.add('offcanvas-active');
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  
+  document.querySelectorAll('[data-trigger]').forEach(function(everyelement){
+    let offcanvas_id = everyelement.getAttribute('data-trigger');
+    everyelement.addEventListener('click', function (e) {
+      e.preventDefault();
+          show_offcanvas(offcanvas_id);
+    });
+  });
+
+  document.querySelectorAll('.btn-close').forEach(function(everybutton){
+    everybutton.addEventListener('click', function (e) { 
+          close_offcanvas();
+      });
+  });
+
+  document.querySelector('.screen-darken').addEventListener('click', function(event){
+    close_offcanvas();
+  });
+
+}); 

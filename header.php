@@ -28,16 +28,33 @@
 		<header id="masthead" class="site-header">
 			<div class="container overflow-hidden">
 				<div class="row align-items-center">
-					<div class="col-7 col-sm-7 col-lg-2 col-xxl-2">
+					<div class="col col-lg-2 col-xxl-2">
 						<div class="site-branding logo">
 							<?php the_custom_logo(); ?> 
 						</div>
+						<!-- For mobile Menu -->
+						<nav id="navbar_main" class="mobile-offcanvas d-xxl-none d-xl-none"> 
+							<div class="offcanvas-header">  
+								<button class="btn-close float-end"></button>
+							</div> 
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'main-menu',
+									'menu_id'        => 'primary-menu',
+									'menu_class'	=>	'nav', 
+								)
+							);
+							?>  
+						</nav>
+						<a class="btn-mobile d-lg-none d-xl-none d-xxl-none" data-bs-toggle="offcanvas" href="#navbar_main" role="button" aria-controls="offcanvasExample">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+						</svg>
+						</a>
 					</div>
-					<div class="col-5 col-sm-5 col-lg-8 col-xxl-8">
-						<nav class="navbar navbar-expand-lg">  
-							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span> 
-							</button>
+					<div class="d-none d-lg-block col-lg-8 col-xxl-8"> 
+						<nav class="navbar navbar-expand-lg mobile-offcanvas">  
 							<div class="collapse navbar-collapse" id="navbarScroll">
 								<?php
 								wp_nav_menu(
@@ -54,7 +71,7 @@
 					<div class="d-none d-lg-block col-lg-2 col-xxl-2">
 						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 							<div class="wpxray-button">
-								<a class="float-end" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
+								<a class="float-end button" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
 							</div>
 						<?php } ?>
 					</div> 
@@ -62,7 +79,6 @@
 			</div>
 		</header><!-- #masthead -->
 
-		<div class="container">
-			<div class="row">
+ 
 			
 			

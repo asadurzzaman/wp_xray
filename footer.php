@@ -8,9 +8,7 @@
  *
  * @package wpxray
  */
-?>
-			</div>
-		</div>
+?> 
 	<footer id="colophon" class="site-footer">
 		<div class="footer-top">
 			<div class="container">
