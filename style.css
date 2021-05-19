@@ -161,8 +161,11 @@ ul#primary-menu li.current-menu-item a:after {
 } */
 
 /* Footer Style */
-.site-footer{
-	background:#0D1331;  
+.site-footer {
+	background: url(http://localhost/wpxray/wp-content/uploads/2021/05/footer-bg-1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 h2.widget-title{
 	font-family: Inter;
@@ -231,7 +234,7 @@ p.fb-group{
 
 }
 .footer-bottom{
-	padding: 20px 0px; 
+	padding: 40px 0px; 
 	position: relative;
 }
 .footer-bottom::after{
@@ -256,4 +259,99 @@ p.fb-group{
 }
 .site-info p a {
 	color: #cecece;
+}
+
+/* Mobile menu style */
+body.offcanvas-active {
+	overflow: hidden;
+}
+nav#navbar_main {
+	display: none;
+}
+.offcanvas-header {
+	display: none;
+}
+.screen-darken {
+	height: 100%;
+	width: 0%;
+	z-index: 30;
+	position: fixed;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgba(34, 34, 34, 0.6);
+	transition: opacity .2s linear, visibility 0.2s, width 2s ease-in;
+}
+.screen-darken.active {
+	z-index: 10;
+	transition: opacity .3s ease, width 0s;
+	opacity: 1;
+	width: 100%;
+	visibility: visible;
+}
+/* ============ mobile view ============ */
+@media all and (max-width: 991px) {
+	.site-branding.logo {
+		display: inline-flex;
+	}
+	a.btn-mobile {
+		float: right;
+		color: #fff;
+	}
+
+	.mobile-offcanvas {
+		background: #eee;
+		padding: 10px 30px 45px 30px;
+	}
+	ul#primary-menu {
+		display: inline;
+	}
+		ul#primary-menu li {
+			width: 100%;
+			display: block;
+			border-bottom: 1px solid #000;
+		}
+	ul#primary-menu li a {
+		color: #202020;   
+		font-size: 16px; 
+		text-align: left;
+		padding: 15px 0px;
+		display: block;
+		position: relative;
+	}
+nav#navbar_main {
+	display: block;
+	height: auto;
+}
+	.offcanvas-header {
+		display: block;
+	}
+
+	.mobile-offcanvas {
+		visibility: hidden;
+		transform: translateY(-100%);
+		border-radius: 0;
+		display: block;
+		position: fixed;
+		top: 100px;
+		left: 10%;
+		height: 100%;
+		width: 80%;
+		z-index: 1200;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+	}
+
+	.mobile-offcanvas.show {
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.mobile-offcanvas .container,
+	.mobile-offcanvas .container-fluid {
+		display: block;
+	}
+
 }
