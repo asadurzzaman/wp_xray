@@ -13,8 +13,9 @@
  */
 
 get_header();
-
 ?>
+
+<div class="col-lg-9 col-xxl-9">
 	<main id="primary" class="site-main"> 
 		<?php
 		while ( have_posts() ) :
@@ -32,9 +33,26 @@ get_header();
 
 	</main><!-- #main --> 
 
-
+</div>
 <?php 
-	if( !is_front_page(  ) ){
-		get_sidebar(); 
-	}
+ 		if ( is_front_page() && is_home() ) {
+		// Default homepage
+
+		} elseif ( is_front_page() ) {
+		// static homepage
+
+		} elseif ( is_home() ) {
+		// blog page
+			//echo "</div></div>";
+		} elseif( is_post_type_archive() ) {
+		//everything else
+			//echo "</div></div>";
+		} elseif(is_page() ) {
+		//everything else
+			//echo "</div></div>";
+			get_sidebar(); 
+		}else {
+
+		}
+
 get_footer();

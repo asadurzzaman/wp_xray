@@ -8,6 +8,26 @@
  *
  * @package wpxray
  */
+
+
+ 		if ( is_front_page() && is_home() ) {
+		// Default homepage
+
+		} elseif ( is_front_page() ) {
+		// static homepage
+
+		} elseif ( is_home() ) {
+		// blog page
+			echo "</div></div>";
+		} elseif( is_post_type_archive() ) {
+		//everything else
+			echo "</div></div>";
+		} elseif(is_page() ) {
+		//everything else
+			echo "</div></div>";
+		}else {
+
+		}
 ?> 
 	<footer id="colophon" class="site-footer">
 		<div class="footer-top">

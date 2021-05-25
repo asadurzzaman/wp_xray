@@ -261,6 +261,15 @@ p.fb-group{
 	color: #cecece;
 }
 
+
+/* Page header css */
+
+.page-top-header{
+	padding: 100px 0px;
+	background: #2D49CD;
+	color: white;
+}
+
 /* Mobile menu style */
 body.offcanvas-active {
 	overflow: hidden;
