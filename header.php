@@ -79,6 +79,27 @@
 			</div>
 		</header><!-- #masthead -->
 
- 
-			
+		<?php
+		if ( is_front_page() && is_home() ) {
+		// Default homepage
+
+		} elseif ( is_front_page() ) {
+		// static homepage
+
+		} elseif ( is_home() ) {
+		// blog page
+			echo "<div class=".'container'.">
+			<div class=".'row'.">";
+		} elseif ( is_post_type_archive() ) {
+		//everything else
+			echo "<div class=".'container'.">
+			<div class=".'row'.">";
+		}elseif (is_page() ) {
+		//everything else
+			get_template_part( 'page-header', 'page' );
+			echo "<div class=".'container'.">
+			<div class=".'row'.">";
+		}else{
+
+		}
 			
