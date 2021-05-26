@@ -26,10 +26,10 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site"> 
 		<header id="masthead" class="site-header">
-			<div class="container overflow-hidden menu-border">
+			<div class="container overflow-hidden">
 				<div class="row align-items-center">
 					<div class="col col-lg-3 col-xxl-3">
-						<div class="site-branding logo">
+						<div class="site-branding logo menu-border">
 							<?php the_custom_logo('new'); ?> 
 						</div>
 						<!-- For mobile Menu -->
