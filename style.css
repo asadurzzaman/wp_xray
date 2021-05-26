@@ -82,10 +82,10 @@ a{
 	background:linear-gradient(46.85deg, #C3DE8B -73.73%, #67F6CC -11.66%, #54D4FF 91.48%);
 	border-radius: 5px;
 }
-.logo img{
+/* .logo img{
 	width: 150px;
 	height: auto;
-}
+} */
 header.site-header {
 	background: #2D49CD; 
 }
@@ -235,7 +235,7 @@ p.fb-group{
 }
 .footer-bottom{
 	padding: 40px 0px; 
-	position: relative;
+	position: relative; 
 }
 .footer-bottom::after{
 	position: absolute;

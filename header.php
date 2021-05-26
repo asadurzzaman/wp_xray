@@ -28,9 +28,9 @@
 		<header id="masthead" class="site-header">
 			<div class="container overflow-hidden">
 				<div class="row align-items-center">
-					<div class="col col-lg-2 col-xxl-2">
+					<div class="col col-lg-3 col-xxl-3">
 						<div class="site-branding logo">
-							<?php the_custom_logo(); ?> 
+							<?php the_custom_logo('new'); ?> 
 						</div>
 						<!-- For mobile Menu -->
 						<nav id="navbar_main" class="mobile-offcanvas d-xxl-none d-xl-none"> 
@@ -53,7 +53,7 @@
 						</svg>
 						</a>
 					</div>
-					<div class="d-none d-lg-block col-lg-8 col-xxl-8"> 
+					<div class="d-none d-lg-block col-lg-7 col-xxl-7"> 
 						<nav class="navbar navbar-expand-lg mobile-offcanvas">  
 							<div class="collapse navbar-collapse" id="navbarScroll">
 								<?php
