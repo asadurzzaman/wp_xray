@@ -30,3 +30,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+add_filter( 'get_custom_logo', 'wpcommerz_custom_logo' );
+
+
+function wpcommerz_custom_logo( $html ) {
+
+    //$html = str_replace( 'custom-logo', 'img-fluid', $html );
+    $html = str_replace( 'custom-logo-link', 'navbar-brand', $html );
+
+    return $html;
+}
